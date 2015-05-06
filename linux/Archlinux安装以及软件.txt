@@ -1,0 +1,144 @@
+硬盘分区
+	parted
+挂载分区
+	mount
+安装基本系统
+	添加镜像
+	nano /etc/pacman.d/mirrorlist
+		添加
+		Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch (中科大)
+	强制刷新：pacman -Syy
+	安装基本系统：pacstrap /mnt base base-devel
+	若出现密钥错误：pacman -S archlinux-keyring
+	安装基本软件
+		networkmanager          网络管理
+		开机自动进行网络管理
+		systemcli enable networkmanager
+
+		fuse-exfat exfat-utils  exfat分区支持
+		ntfs-3g                 ntfs分区支持
+		dosfstools              fat分区支持	
+生成 fstab
+	genfstab -U -p /mnt >> /mnt/etc/fstab
+	检查：nano /mnt/etc/fstab
+配置系统
+	arch-chroot /mnt /bin/bash
+	Locale
+		本地化：nano /etc/locale.gen
+		更新：locale-gen
+	时区设置
+		以上海为例：ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+	设置硬件时间
+		hwclock --systohc --utc
+	设置主机名
+		写入主机名：echo myhostname > /etc/hostname
+		
+		更改hosts：nano /etc/hosts
+				host中内容如下
+				#<ip-address>	<hostname.domain.org>	<hostname>
+				127.0.0.1	localhost.localdomain	localhost	myhostname
+				::1		localhost.localdomain	localhost	myhostname
+
+创建初始 ramdisk 环境
+	在普通的PC上安装Linux可调过该步骤
+	按需编辑 /etc/mkinitcpio.conf 
+		USB设备将 block 添加到紧挨 udev 的后面
+	重新生成initramfs镜像 mkinitcpio -p linux
+	
+设置 Root 密码
+	passwd
+
+安装并配置 bootloader
+	对于BIOS
+		下载grub：pacman -S grub
+		安装grub：grub-install --target=i386-pc --recheck /dev/sda
+		下面命令会自动生成配置文件，若想自动检测硬盘上安装的其它操作系统
+		请在执行下面命令前先安装 os-prober, 即 pacman -S os-prober.
+		grub-mkconfig -o /boot/grub/grub.cfg
+	对于UEFI
+		pacman -S dosfstools efibootmgr
+		grub-install --target=x86_64-efi --efi-directory=$esp --bootloader-id=arch_grub --recheck
+
+卸载分区并重启系统
+	离开chroot：exit
+	重启:reboot
+
+添加用户
+	useradd -m -g users -s /bin/bash username 创建用户
+	配置sudo：visudo
+
+安装软件
+	系统工具
+		yaourt                  AUR扩展下载
+			在 /etc/pacman.conf 中加入
+				[archlinuxcn]
+				#The Chinese Arch Linux communities packages.
+				SigLevel = Optional TrustAll
+				Server   = http://repo.archlinuxcn.org/$arch
+
+				若存在key问题
+				导入 archlinuxcn-keyring
+				pacman -S archlinuxcn-keyring
+
+		gvfs                    自动挂载
+		thunar-volman           挂载扩展
+		
+	桌面系统
+		xorg                    X系统
+		xorg-xinit              X辅助启动
+			进行设置
+			nano /etc/X11/xinit/xinitrc
+			在最后添加
+			中文支持
+			export LANG=zh_CN.UTF-8
+			export LANGUAGE=zh_CN:en_US
+			export LC_ALL=zh_CN.UTF-8
+			
+			输入法支持
+			export GTK_IM_MODULE=fcitx
+			export QT_IM_MODULE=fcitx
+			export XMODIFIERS="@im=fcitx"
+
+			启动桌面
+			exec startxfce4
+		xf86-video-vesa         	通用显卡驱动
+		xfce4                   	xfce4桌面
+		xfce4-goodies               xfce4扩展
+		ttf-arphic-ukai             中文字体
+		adobe-source-code-pro-fonts 英文字体
+		fcitx                       中文输入法
+		fcitx-configtool        	输入法配置工具
+		fcitx-cloudpinyin       	云拼音输入法
+
+	桌面应用
+		smplayer                	视频播放器
+		xcursor-flatbed         	鼠标图标
+		numix-themes            	numix主题
+		numix-icon-theme        	numix图标
+		numix-circle-icon-theme 	numix图标
+		gparted                 	分区工具
+		foxitreader             	pdf阅读器
+		deadbeef                	音乐播放器
+		flashplugin             	flash组件
+		pycharm                 	Python开发IDE 
+		firefox                 	火狐浏览器
+		firefox-i18n-zh-cn      	火狐汉化包
+		wps-office              	文本处理软件
+		alacarte					主菜单
+		file-roller					归档管理器
+		p7zip						归档工具
+		wine						运行exe
+		
+	开发工具
+		gcc                     	C/C++开发（默认已装）
+		gdb                     	C/C++调试	
+		python2                 	Python开发
+		python2-pip             	Python库
+		python2-numpy           	Python库
+		python2-matplotlib      	Python库
+		python2-mayavi          	Python库
+
+	Win支持
+		playonlinux 				wine整合
+		wine                        运行exe
+		wine_gecko wine-mono        IE .NET 依赖解决

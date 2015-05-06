@@ -1,0 +1,48 @@
+Ueditor的使用
+	github首页
+		https://github.com/zhangfisher/DjangoUeditor
+	安装
+		使用pip下载 DjangoUeditor
+
+	启用
+		在settings.py中添加app
+		INSTALLED_APPS = (
+			......
+			'DjangoUeditor',
+			......
+		)
+	
+		在urls.py中添加---若无此步骤则无法使用上传之类的功能
+		url(r'^ueditor/', include('DjangoUeditor.urls')),
+
+	使用
+		在models中使用
+		from DjangoUeditor.models import UEditorField
+		class Blog(models.Model):
+			Name=models.CharField(,max_length=100,blank=True)
+			Content=
+				UEditorField(u'内容   ',
+					width=600, height=300, toolbars="full", imagePath="", 
+				filePath="", upload_settings={"imageMaxSize":1204000},
+			settings={},command=None,event_handler=myEventHander(),blank=True)
+		说明：
+			UEditorField继承自models.TextField,
+			因此你可以直接将model里面定义的models.
+			TextField直接改成UEditorField即可。
+			UEditorField提供了额外的参数：
+        	toolbars:配置你想显示的工具栏，取值为mini,normal,full，
+			代表小，一般，全部。如果默认的工具栏不符合您的要求，
+			您可以在settings里面配置自己的显示按钮。
+			参见后面介绍。
+        	imagePath:图片上传的路径,如"images/",实现上传到"{{MEDIA_ROOT}}/images"文件夹
+        	filePath:附件上传的路径,如"files/",实现上传到"{{MEDIA_ROOT}}/files"文件夹
+        	scrawlPath:涂鸦文件上传的路径,如"scrawls/",
+			实现上传到"{{MEDIA_ROOT}}/scrawls"文件夹,如果不指定则默认=imagepath
+        	imageManagerPath:图片管理器显示的路径，
+			如"imglib/",实现上传到"{{MEDIA_ROOT}}/imglib",如果不指定则默认=imagepath。
+        	options：其他UEditor参数，字典类型。
+			参见Ueditor的文档ueditor_config.js里面的说明。
+        	css:编辑器textarea的CSS样式
+        	width，height:编辑器的宽度和高度，以像素为单位。
+
+
