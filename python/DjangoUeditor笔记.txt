@@ -23,7 +23,7 @@ Ueditor的使用
 			Content=
 				UEditorField(u'内容   ',
 					width=600, height=300, toolbars="full", imagePath="", 
-				filePath="", upload_settings={"imageMaxSize":1204000},
+				filePath="", upload_settings={"imageMaxSize":1204000}, # 单位为B
 			settings={},command=None,event_handler=myEventHander(),blank=True)
 		说明：
 			UEditorField继承自models.TextField,

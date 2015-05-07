@@ -1,0 +1,43 @@
+Archlinux下
+
+安装Apache
+安装mod_wsgi.so mod_wsgi2 对应于python2
+修改编辑httpd.conf 位于/etc/htpd/conf/httpd.conf
+	LoadModule wsgi_module modules/mod_wsgi.so       # 导入wsgi模块
+	WSGIScriptAlias / /srv/http/physicsite/wsgi.py	 # 指定wsgi.py的位置
+	WSGIPythonPath /srv/http						 # 网站根目录
+	DocumentRoot "/srv/http"						 # 网站根目录
+	<Directory "/srv/http">							 # 配置网站根目录
+	<Files wsgi.py>
+	Require all granted
+	</Files>
+	</Directory>
+
+	运行 ./manage.py collectstatic 收集静态文件
+
+	在settings.py中
+		DEBUG=False			# 关闭调试模式
+		ALLOWED_HOSTS = [	# 设置允许访问的网址 跟据具体情况设置
+			'127.0.0.1',
+		]
+
+
+	使用Django自己的应用来处理静态文件
+	在urls.py中加入
+    ###############################################
+	# static_root
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': settings.STATIC_ROOT, }),
+    ###############################################
+    # media_root
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': settings.MEDIA_ROOT, }),
+	使用以上模式来陪值所有的app静态文件，较为复杂
+	使用Django自己的应用来处理静态文件 低效的，不建议的
+
+
+	对网站根目录权限进行设置
+		如在archlinux中将网站根目录的所有者、用户组更改为http
+		否则将引发文件上传错误
+	
+

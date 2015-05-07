@@ -1,0 +1,80 @@
+	系统
+		networkmanager          网络管理
+		fuse-exfat exfat-utils  exfat分区支持
+		ntfs-3g                 ntfs分区支持
+		dosfstools              fat分区支持	
+		grub					启动引导
+		dosfstools efibootmgr   引导管理
+		yaourt                  AUR扩展下载
+		gvfs                    自动挂载
+		thunar-volman           挂载扩展
+	桌面系统
+		xorg                    X系统
+		xorg-xinit              X辅助启动
+			进行设置
+			nano /etc/X11/xinit/xinitrc
+			在最后添加
+			中文支持
+			export LANG=zh_CN.UTF-8
+			export LANGUAGE=zh_CN:en_US
+			export LC_ALL=zh_CN.UTF-8
+			
+			输入法支持
+			export GTK_IM_MODULE=fcitx
+			export QT_IM_MODULE=fcitx
+			export XMODIFIERS="@im=fcitx"
+
+			启动桌面
+			exec startxfce4
+		xf86-video-vesa         	通用显卡驱动
+		xfce4                   	xfce4桌面
+		xfce4-goodies               xfce4扩展
+		ttf-arphic-ukai             中文字体
+		adobe-source-code-pro-fonts 英文字体
+		fcitx                       中文输入法
+		fcitx-configtool        	输入法配置工具
+		fcitx-cloudpinyin       	云拼音输入法
+
+	桌面应用
+		smplayer                	视频播放器
+		xcursor-flatbed         	鼠标图标
+		numix-themes            	numix主题
+		numix-icon-theme        	numix图标
+		numix-circle-icon-theme 	numix图标
+		gparted                 	分区工具
+		foxitreader             	pdf阅读器
+		deadbeef                	音乐播放器
+		flashplugin             	flash组件
+		firefox                 	火狐浏览器
+		firefox-i18n-zh-cn      	火狐汉化包
+		wps-office              	文本处理软件
+		alacarte					主菜单
+		file-roller					归档管理器
+		p7zip						归档工具
+		wine						运行exe
+		
+	开发工具
+		gcc                     	C/C++开发（默认已装）
+		gdb                     	C/C++调试	
+		Codeblocks					C/C++开发IDE
+		python2                 	Python开发
+		python2-pip             	Python库
+		python2-numpy           	Python库
+		python2-matplotlib      	Python库
+		python2-mayavi          	Python库
+		pycharm                 	Python开发IDE
+		virtalbox					虚拟机
+		×Nginx						服务器软件
+		×uwsgi uwsgi-plugin-python2	Nginx的python支持
+		apache						服务器软件
+		mod_wsgi2					Apache的python支持
+
+	Win支持
+		playonlinux 				wine整合
+		wine                        运行exe
+		wine_gecko wine-mono        IE .NET 依赖解决
+
+	下载工具
+		uget						普通下载器-gui版
+		wget						普通下载器-命令行版
+		vuze						bt下载器-gui
