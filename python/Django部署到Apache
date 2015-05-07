@@ -21,23 +21,36 @@ Archlinux下
 			'127.0.0.1',
 		]
 
+	处理静态文件
+		########################################################################
+		使用Django自己的应用来处理静态文件
+		在urls.py中加入
+		###############################################
+		# static_root
+		url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
+		    {'document_root': settings.STATIC_ROOT, }),
+		###############################################
+		# media_root
+		url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+		    {'document_root': settings.MEDIA_ROOT, }),
+		使用以上模式来陪值所有的app静态文件，较为复杂
+		使用Django自己的应用来处理静态文件 低效的，不建议的
 
-	使用Django自己的应用来处理静态文件
-	在urls.py中加入
-    ###############################################
-	# static_root
-    url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': settings.STATIC_ROOT, }),
-    ###############################################
-    # media_root
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': settings.MEDIA_ROOT, }),
-	使用以上模式来陪值所有的app静态文件，较为复杂
-	使用Django自己的应用来处理静态文件 低效的，不建议的
 
+		对网站根目录权限进行设置
+			如在archlinux中将网站根目录的所有者、用户组更改为http
+			否则将引发文件上传错误
+		########################################################################
+		使用apache来处理静态文件请求
+		给/static /media 重定向
+		Alias /static /srv/http/static_root
+		<Directory "/srv/http/static_root">
+		Require all granted
+		</Directory>
 
-	对网站根目录权限进行设置
-		如在archlinux中将网站根目录的所有者、用户组更改为http
-		否则将引发文件上传错误
-	
+		Alias /media /srv/http/media_root
+		<Directory "/srv/http/media_root">
+		Require all granted
+		</Directory>
+
 
