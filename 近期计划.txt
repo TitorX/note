@@ -1,7 +1,8 @@
 Django网站 ---- 应用物理系官网
 	后台数据模型建立
 	前后台交互
-	配置到生产环境 
+	配置到生产环境
+		使用Apache处理静态文件
 
 Linux学习
 	学习linux权限、用户等概念
@@ -23,3 +24,30 @@ Matlab学习
 
 ArcGIS开发
 	暂无实践项目
+
+
+
+
+
+
+
+
+
+//////////掌握技能
+C
+C++
+Win32API
+Python
+Django
+数据库
+	sqlite
+	mysql
+PHP
+HTML/CSS
+
+////////不够熟练
+Linux
+JavaScript
+Apache
+Git
+
