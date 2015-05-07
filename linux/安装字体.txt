@@ -1,0 +1,10 @@
+将添加的字体放在 newfont 文件夹中
+拷贝到 /usr/share/fonts/ 中
+进行权限设置
+	sudo chmod 755 newfont -R
+建立字体缓存
+1）sudo mkfontscale
+
+2）sudo mkfontdir
+
+3）sudo fc-cache -fv 

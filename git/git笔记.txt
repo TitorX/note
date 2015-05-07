@@ -1,0 +1,48 @@
+git设置
+	git config --global user.name 'name'
+	git config --global user.email 'email@email.com'
+	设置姓名 邮箱
+	
+	git config --global color.ui 'auto'
+	开启彩色提示
+
+	--globle 表示全局
+
+创建仓库
+	git init
+
+添加文件到暂存区
+	git add XXX
+
+提交暂存区的内容
+	git commit -m '注释说明'
+	git commit -a -m '注释说明' 无需add 直接提交所有更改
+
+分支
+	git branch newbranch           从当前分支创建分支
+	git branch newbranch oldbranch 从oldbranch分支创建分支
+	git checkout new               检出分支
+	git checkout -b new master     从master分支创建分支并检出
+	git branch					   显示所有分支
+	git branch -m master mybranch  将master分支重命名为mybranch
+	git merge somebranch           将somebranch分支直接和并到当前分支
+	压合合并
+	拣选合并
+	冲突处理
+	git branch -d some             删除some分支 不可以删除未合并到当前分支的分支
+	git branch -D some             强制删除some分支
+
+git远程协作
+	git提供了三种通讯方式 SSH git HTTP/HTTPS
+	SSH最安全 git最快速 HTTP易于架设
+	git clone url                  从url克隆项目
+	git branch -r				   显示远程分支
+	git fetch					   更新远程分支 仅仅取来
+	git pull                       更新远程分支并合并到本地
+	git push					   推入改动 --dry-run 显示推入的提交
+	git remote add origin url      手动添加远程版本库别名
+	git push origin master		   将master推入origin
+	git push origin local:far      提交本地的local分支作为远程的far分支
+	git push origin :oldbranch     删除远端的oldbranch分支 原理是提取空白的分支提交
+
+
