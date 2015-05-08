@@ -52,6 +52,8 @@
 		file-roller					归档管理器
 		p7zip						归档工具
 		wine						运行exe
+		*steam						游戏平台
+		*poingdownload-git			下载工具
 		
 	开发工具
 		gcc                     	C/C++开发（默认已装）
