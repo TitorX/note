@@ -62,6 +62,7 @@
 		python2-numpy           	Python库
 		python2-matplotlib      	Python库
 		python2-mayavi          	Python库
+		python2-vpython				3D库
 		pycharm                 	Python开发IDE
 		virtalbox					虚拟机
 		×Nginx						服务器软件
