@@ -71,6 +71,7 @@
 		mod_wsgi2					Apache的python支持
 		cmake						c工程辅助
 		eclipse						IDE
+		git							版本控制工具
 
 	Win支持
 		playonlinux 				wine整合
