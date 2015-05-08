@@ -7,7 +7,6 @@ Linux学习
 	学习linux权限、用户等概念
 
 Linux配置
-	亮度调节
 	亮度记录、声音记录
 
 N体运动模拟程序开发
@@ -42,6 +41,7 @@ PHP
 HTML/CSS
 
 ////////不够熟练
+Json
 Linux
 JavaScript
 Apache
