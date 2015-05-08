@@ -1,0 +1,117 @@
+linux中关于权限的概念有
+	用户 用户组 其他人 root账户
+
+使用ls -all 查看文件信息
+[doom@ArchCode tmp]$ ls -all
+总用量 136
+drwxrwxrwt 10 root root     340 5月   8 09:39 .
+drwxr-xr-x 17 root root    4096 5月   5 05:51 ..
+-rw-r-----  1 doom users    100 5月   8 09:36 adb.log
+-rw-r--r--  1 doom users 112296 5月   8 09:35 azrating_1.5.14.jar
+-rw-r--r--  1 doom users    676 5月   8 09:35 AZU8367882143284979190.tmp
+srw-------  1 doom users      0 5月   8 09:14 fcitx-socket-:0
+drwxrwxrwt  2 root root      40 5月   8 09:13 .font-unix
+drwxr-xr-x  2 doom users     60 5月   8 09:35 hsperfdata_doom
+drwxrwxrwt  2 root root      60 5月   8 09:14 .ICE-unix
+-rw-------  1 doom users    159 5月   8 09:13 serverauth.ByMlVB2DG7
+drwx------  2 doom users     60 5月   8 09:14 ssh-mIVCwsfg8mdY
+drwxrwxrwt  2 root root      40 5月   8 09:13 .Test-unix
+drwx------  3 doom users     60 5月   8 09:33 .wine-1000
+-r--r--r--  1 root users     11 5月   8 09:13 .X0-lock
+drwxrwxrwt  2 root root      60 5月   8 09:13 .X11-unix
+-rw-------  1 doom users    410 5月   8 09:14 .xfsm-ICE-WGMFYX
+drwxrwxrwt  2 root root      40 5月   8 09:13 .XIM-unix
+
+解析：
+drwxrwxrwt    2      root        root       40     5月   8 09:13      .XIM-unix
+  文件权限   连接数  文件所有者 文件所属用户组 文件大小   最后修改时间          文件名
+
+文件权限
+	d rwx rwx rwt 拆开为3组理解
+	d代表该文件类型
+		d代表目录 
+		-代表文件
+		l代表链接文件(linkfile)
+		b可供存储的接口设备
+		c串行端口设备(如鼠标，键盘)
+
+	接下来的三组字符
+		r代表可读
+		w代表可写
+		x代表可执行
+		rwx三者位置是固定的
+		-代表没有该项权限
+
+	第一组
+		表示文件所有者的权限 在上例中为rwx 可读可写可执行
+	第二组
+		表示同用户组的权限 在上例中为rwx 可读可写可执行
+	第三组
+		表示其他非本用户组的权限 在上例中为rwt
+
+
+
+
+改变文件权限
+	chgrp 改变文件所属用户组
+	chown 改变文件所有者
+	chmod 改变文件权限
+
+	chgrp：
+		chgrp [-R] dirname/filename
+		-R 进行递归的更改，连同目录的子目录、子文件全部修改
+
+	chown：
+		chown [-R] 帐号名称 文件或目录
+		chown [-R] 帐号名称:组名 文件或目录     # 同时更改用户、用户组
+		chown [-R] 帐号名称.组名 文件或目录     # 不推荐此种方式
+		chown [-R] .组名 文件或目录            # 只修改用户组
+		-R 进行递归
+
+	chmod：
+		使用数字式更改权限
+			r:4
+			w:2
+			x:1
+			-:0
+			chmod [-R] xyz 文件或目录
+			xyz 对应于所有者、用户组、其他人的权限
+				x y z分别是一个数值 使用前面rwx所对应的数值的和
+				例如：
+					chmod 770 file
+					代表将file文件的权限设置为 rwx rwx ---
+					x = 7 = r + w + x = 4 + 2 + 1
+					y = 7 = r + w + x = 4 + 2 + 1
+					z = 0 = - + - + - = 0 + 0 + 0
+		使用符号类型更改权限
+			      | u(user)  | + | r |
+			chmod | g(group) | - | w |  文件或目录
+			      | o(other) | = | x |
+			      | a(all)   |
+			
+			chmod u+r file  # 文件所有者增加读的权限
+			chmod uo-x file # 文件所有者以及其他人减去执行的权限
+			chmod g=rx file # 用户组设置为r-x权限 可读不可写可执行
+			chmod +x file   # 为所有人添加执行权限 若不指定操作对象则默认为a
+
+
+
+
+权限详解
+	对于文件 rwx 容易理解
+	对于目录
+	r 读权限
+		可以获得该目录下的文件列表
+	w 写权限
+		删除更新创建文件或目录
+	x 执行权限
+		可以计入该目录
+
+
+
+
+
+
+
+
+
