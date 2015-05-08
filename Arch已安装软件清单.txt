@@ -53,7 +53,10 @@
 		p7zip						归档工具
 		wine						运行exe
 		*steam						游戏平台
+		*lib32-nvidia-304xx-utils	32位显卡驱动 steam支持
+		*lib32-alsa-plugins 		steam声音支持
 		*poingdownload-git			下载工具
+		×transmission-gtk			bt下载工具
 		
 	开发工具
 		gcc                     	C/C++开发（默认已装）
@@ -76,7 +79,7 @@
 		git							版本控制工具
 
 	Win支持
-		playonlinux 				wine整合
+		*playonlinux 				wine整合
 		wine                        运行exe
 		wine_gecko wine-mono        IE .NET 依赖解决
 
