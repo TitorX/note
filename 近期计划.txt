@@ -3,12 +3,6 @@ Django网站 ---- 应用物理系官网
 	前后台交互
 	配置到生产环境
 
-Linux学习
-	学习linux权限、用户等概念
-
-Linux配置
-	亮度记录、声音记录
-
 N体运动模拟程序开发
 	使用python numpy等重写
 	作为个人项目管理
@@ -26,13 +20,11 @@ Git学习
 
 正则表达式学习
 
-
-
 //////////掌握技能
 C
 C++
 Win32API
-Python
+Pthon
 Django
 数据库
 	sqlite
@@ -46,4 +38,3 @@ Linux
 JavaScript
 Apache
 Git
-
