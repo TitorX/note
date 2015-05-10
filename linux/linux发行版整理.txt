@@ -1,0 +1,10 @@
+个人
+	日常
+		Ubuntu          桌面做的比较好，更适合日常办公上网使用
+		Ubuntukylin     Ubuntu的中文定制版本
+	开发
+		Debian          更稳定
+		Archlinux       更激进
+
+服务器
+	Centos              稳定、高耗
