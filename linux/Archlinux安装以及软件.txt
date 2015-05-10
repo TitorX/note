@@ -142,3 +142,4 @@
 		playonlinux 				wine整合
 		wine                        运行exe
 		wine_gecko wine-mono        IE .NET 依赖解决
+
