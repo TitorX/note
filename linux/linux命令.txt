@@ -1,2 +1,11 @@
 查看本机IP地址
 	ip addr
+查看内核版本
+	uname -a
+关机
+	shutdown -h now 立刻关机
+	shutdown -h +60 60分钟后关机
+	shutdown -h 1:05 1:05关机
+
+重新启动
+	reboot
