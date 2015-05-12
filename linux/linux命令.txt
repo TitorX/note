@@ -9,3 +9,20 @@
 
 重新启动
 	reboot
+
+查看进程
+	ps -ef | grep test
+
+杀死进程
+	kill pid
+
+使进程在后台进行
+	commadn&
+	命令的后面接 & 符号可以使命令在后台运行
+
+查看后台进程
+	jobs
+
+后台执行进程
+	nohup commadn&
+	在后台执行一个进程
