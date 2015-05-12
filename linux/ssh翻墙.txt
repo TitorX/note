@@ -1,0 +1,4 @@
+获得国外的SSH帐号
+ssh -N -D port user@ip
+如下
+ssh -N -D 7070 free1@104.237.156.138
