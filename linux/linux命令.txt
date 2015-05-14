@@ -26,3 +26,11 @@
 后台执行进程
 	nohup commadn&
 	在后台执行一个进程
+
+创建用户
+	useradd -m -g users -s /bin/bash username
+
+
+
+
+
