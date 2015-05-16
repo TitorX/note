@@ -1,0 +1,42 @@
+# coding=utf-8
+import socket
+import fcntl
+import struct
+import sys
+def get_ip_address(ifname): 
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    return socket.inet_ntoa(fcntl.ioctl(
+        s.fileno(),
+        0x8915,  # SIOCGIFADDR 
+        struct.pack('256s', ifname[:15])
+    )[20:24])
+
+#get_ip_address('lo')环回地址
+#get_ip_address('eth0')主机ip地址
+print get_ip_address(sys.argv[1])
+
+
+
+urllib
+urllib2
+httplib
+正则表达式 官方文档
+scrapy
+
+
+apache配置
+pip安装
+
+
+
+
+自动化测试
+异步 
+运维
+
+
+大数据
+spawk
+d
+
+
