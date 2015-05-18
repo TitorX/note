@@ -23,25 +23,34 @@ git设置
 	git branch newbranch oldbranch 从oldbranch分支创建分支
 	git checkout new               检出分支
 	git checkout -b new master     从master分支创建分支并检出
-	git branch					   显示所有分支
+	git branch                     显示所有分支
 	git branch -m master mybranch  将master分支重命名为mybranch
 	git merge somebranch           将somebranch分支直接和并到当前分支
-	压合合并
-	拣选合并
-	冲突处理
+	git merge --squash somebranch  将somebranch分支压合合并到当前分支
+	git cherry-pick somecommit     将某些commit拣选合并到当前分支
+	git mergetool                  查看冲突处理工具
 	git branch -d some             删除some分支 不可以删除未合并到当前分支的分支
 	git branch -D some             强制删除some分支
+
+git历史记录查询
+	git log                        查看commit记录
+	git diff commit                查看修改内容
+	git blame file                 查看历次提交者
+	git commit -C commit -a --amend增补提交
+	git revert commit              反转提交
+	git reset                      复位
+	git rebase -i commit           重新排序提交
 
 git远程协作
 	git提供了三种通讯方式 SSH git HTTP/HTTPS
 	SSH最安全 git最快速 HTTP易于架设
 	git clone url                  从url克隆项目
-	git branch -r				   显示远程分支
-	git fetch					   更新远程分支 仅仅取来
+	git branch -r                  显示远程分支
+	git fetch                      更新远程分支 仅仅取来
 	git pull                       更新远程分支并合并到本地
-	git push					   推入改动 --dry-run 显示推入的提交
+	git push                       推入改动 --dry-run 显示推入的提交
 	git remote add origin url      手动添加远程版本库别名
-	git push origin master		   将master推入origin
+	git push origin master         将master推入origin
 	git push origin local:far      提交本地的local分支作为远程的far分支
 	git push origin :oldbranch     删除远端的oldbranch分支 原理是提取空白的分支提交
 
