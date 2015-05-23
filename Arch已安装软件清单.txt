@@ -81,6 +81,7 @@
 		docket						沙盒
 		net-tools					ifconfig等网络工具支持
 		mlocate						locate/uodatedb命令支持
+		sqlitebrowser				sqlite数据库图形化管理器
 
 	Win支持
 		*playonlinux 				wine整合
