@@ -1,0 +1,18 @@
+搬瓦工
+	海外 廉价VPS
+七朵云
+	免费PHP/ASP空间 带有免费2级域名
+OpenShift
+	red hat 提供的免费空间 可部署多种应用 php python java...
+sae
+	新浪提供的收费平台 对于个人用户而言价格极为低廉 支持多种应用 php python ...
+freenom
+	免费域名申请 提供 .tk 等多种顶级域名 支持绑定到 ip 以及跳转到其他域名
+风火轮
+	提供免费SSH/VPN代理帐号 同时提供收费的帐号 价格较为低廉
+51linux
+	提供ssh连接的linux主机 用于学习linux
+悠悠代理
+	提供免费SSH/VPN代理帐号 同时提供收费的帐号 价格较为低廉
+HOST1PLUS
+	海外 廉价VPS 空间 稳定性、性能较低 价格超低
