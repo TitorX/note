@@ -12,16 +12,12 @@ VPS使用规划
 
 实习项目
 
-持续学习Linux
-
 学习Git
 	将几个个人项目迁移到Git
 
 ArcGIS开发
 
 ENVI开发
-
-Git学习
 
 物理学项目思考
 	能源
