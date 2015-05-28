@@ -84,6 +84,8 @@
 		sqlitebrowser				sqlite数据库图形化管理器
 		iftop						实时流量监控
 		Aircrack-ng					安全工具
+		gftp						ftp图形界面
+		rhc							openshift管理工具
 
 	Win支持
 		*playonlinux 				wine整合
