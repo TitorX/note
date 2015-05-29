@@ -9,39 +9,26 @@ ArcGIS开发
 
 ENVI开发
 
-物理学项目思考
-	能源
-		核能
-		风能
-		水能
-		太阳能
-	核动力
-		核动力飞船的可行性
-			爆炸式
-			喷射工质式
-			粒子反冲式
-
 在线文字游戏 人工智能
 
 树莓派 玩硬件
 
 //////////掌握技能
 C
-C++
-Win32API
 Pthon
-Django
+////////不够熟练
+PHP
+C++
 数据库
 	sqlite
 	mysql
-PHP
-HTML/CSS
-
-////////不够熟练
-正则表达式
-Json
+Django
 Linux
+正则表达式
+HTML/CSS
+Win32API
 JavaScript
 Apache
 Nginx
 Git
+Json
