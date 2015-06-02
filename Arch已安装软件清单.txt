@@ -64,6 +64,8 @@
 		Codeblocks					C/C++开发IDE
 		python2                 	Python开发
 		python2-pip             	Python库
+		python2-pillow				Python图形库
+		python2-django				Python库
 		python2-numpy           	Python库
 		python2-matplotlib      	Python库
 		python2-mayavi          	Python库
