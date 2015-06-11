@@ -18,3 +18,5 @@ HOST1PLUS
 	海外 廉价VPS 空间 相比搬瓦工略贵
 123systems
 	海外 廉价VPS 空间 稳定性、性能较低 价格超低
+github免费静态页面空间
+	pages.github.com
