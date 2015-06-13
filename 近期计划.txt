@@ -6,10 +6,7 @@ Django网站 ---- 应用物理系官网
 
 完善个人简历页面
 
-VPS使用规划
-	搭建www服务器 个人网站一个 注册域名并解析到IP
-
-实习项目
+MongoDB MySQL 性能考察
 
 ArcGIS开发
 
