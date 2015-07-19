@@ -1,0 +1,46 @@
+安装mysql
+进入mysql
+
+创建数据库       CREATE DATABASE [IF NOT EXISTS] databasename;
+
+选择数据库       USE databasename;
+
+修改数据库       ALTER { DATABASES | SCHEMA } [db_name] ;
+
+删除数据库       DROP DATABASE databasename;
+
+查看数据库       SHOW { DATABASES | SCHEMA } [ LIKE 'pattern' | WHERE expr ];
+
+
+
+
+创建数据表       CREATE TABLE tablename();
+
+更新数据表       ALTER TABLE tbl_name { ADD  | CHANGE | ALTER | MODIFY | DROP }[COLUMN] ();
+	添加字段     	ADD [COLUMN] ();
+	修改字段     	CHARGE [COLUMN] ();
+	改默认值     	ALTER [COLUMN] ;
+	改数据类型   	MODIFY [COLUMN] ;
+	删除字段     	DROP [COLUMN] name;
+
+重命名数据表     RENAME TABLE tbl_name TO new_tbl_name [, tbl_name2 TO new_tbl_name2] ...;
+                 ALTER TABLE tbl_name RENAME TO new_tbl_name ;
+复制数据表       CREATE [TEMPORARY] TABLE [IF NOT EXISTS] tbl_name {LIKE old_tbl_name | (LIKE old_tbl_name)};
+
+删除数据表       DROP [TEMPORARY] TABLE [IF EXISTS] tbl_name [, tbl_name2] ... [RESTRICT | CASCADE];
+
+查看数据表       SHOW [FULL] TABLES [{FROM|IN} db_name] [LIKE 'pattern', WHERE expr];
+
+查看数据表结构   SHOW [FULL] COLUMNS {FROM | IN} tbl_name [{FROM | IN} db_name] ;
+                 DESC tbl_name;
+
+插入记录         INSERT [INTO] tbl_name VALUES (col_1,...);
+                 REPLACE [INTO] tbl_name VALUER (col_1,...);
+
+删除记录         DELETE FROM tbl_name WHERE ...;
+                 TRUNCATE [TABLE] tbl_name;
+
+修改记录         UPDATE tbl_name SET col_name = { expr | DEFAULT } [,...] [WHERE ...];
+
+查看数据表内容   SELECT * FROM tablename;
+
