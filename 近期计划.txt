@@ -2,6 +2,7 @@ Django网站 ---- 应用物理系官网
 
 ENVI开发
 	学习IDL语言
+	IDL文件读取
 
 组团网站
 	编写策划书
@@ -22,6 +23,7 @@ MongoDB 深入配置
 Nginx日志轮值
 
 Git深入学习
+Git服务器搭建
 //////////远
 在线文字游戏 人工智能
 
@@ -33,22 +35,24 @@ Git深入学习
 //////////掌握技能
 C
 Pthon
-////////不够熟练
+////////学习中
+Nginx
 MongoDB
+Git
+Linux
+Django
+IDL
+////////不够熟练
 PHP
 C++
 数据库
 	sqlite
 	mysql
-Django
-Linux
 正则表达式
 HTML/CSS
 Win32API
 JavaScript
 Apache
-Nginx
-Git
 Json
 SVN
 
