@@ -13,6 +13,7 @@ ENVI开发
 使用git完整的开发个人网站
 
 MongoDB 深入配置
+	基本配置
 	监控配置
 	安全认证配置
 	备份修复配置
@@ -21,6 +22,10 @@ MongoDB 深入配置
 	日志轮值
 
 Nginx日志轮值
+
+logrotate进行日志轮值
+cron
+supervisor
 
 Git深入学习
 Git服务器搭建
