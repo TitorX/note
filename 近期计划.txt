@@ -23,6 +23,10 @@ MongoDB 深入配置
 
 Nginx日志轮值
 
+测试Nginx配置
+	普通站点配置
+	负载均衡配置
+
 logrotate进行日志轮值
 cron
 supervisor
