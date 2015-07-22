@@ -21,18 +21,9 @@ MongoDB 深入配置
 	分片配置
 	日志轮值
 
-Nginx日志轮值
-
-测试Nginx配置
-	普通站点配置
-	负载均衡配置
-
 Git深入学习
 Git服务器搭建
-//////////linux工具
-logrotate
-cron
-supervisor
+
 //////////远
 在线文字游戏 人工智能
 
@@ -64,7 +55,11 @@ JavaScript
 Apache
 Json
 SVN
-
+//////////linux工具
+logrotate
+cron
+supervisor
+	uwsgi
 
 
 
