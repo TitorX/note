@@ -27,12 +27,12 @@ Nginx日志轮值
 	普通站点配置
 	负载均衡配置
 
-logrotate进行日志轮值
-cron
-supervisor
-
 Git深入学习
 Git服务器搭建
+//////////linux工具
+logrotate
+cron
+supervisor
 //////////远
 在线文字游戏 人工智能
 
