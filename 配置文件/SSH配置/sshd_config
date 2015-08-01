@@ -1,0 +1,60 @@
+################################################################################
+##
+# 常规设置
+##
+
+# 参考 http://www.jinbuguo.com/openssh/sshd_config.html
+
+# 指定sshd使用的私钥
+HostKey /etc/ssh/ssh_host_rsa_key
+
+# 指定使用的地址族 any(默认) inet(仅ipv4) inet6(仅ipv6)
+AddressFamily any
+
+# 最大连接数
+MaxStartups 5
+
+# 存放该用户可以用来登录的 RSA/DSA 公钥 
+# %% 表示'%'、%h 表示用户的主目录、%u 表示该用户的用户名
+# 默认值是".ssh/authorized_keys"
+# AuthorizedKeysFile .ssh/authorized_keys
+
+################################################################################
+##
+# 安全设置
+##
+# 将sshd配置文件的权限设置为所有非root用户只读 防止恶意篡改
+# chmod 644 /etc/ssh/sshd_config
+
+# 指定每个连接最大允许的认证次数 默认值是 6
+# 如果失败认证的次数超过这个数值的一半 连接将被强制断开 且会生成额外的失败日志消息
+MaxAuthTries 6
+
+
+# sshd服务使用的端口 考虑到安全请尽量设置为1024以上的端口 增加入侵难度
+Port 22
+
+# 对于多网卡或配置多个IP地址的情况 设定sshd只在指定的接口地址监听
+ListenAddress 92.168.0.1
+
+# 禁止用户使用root用户登录
+PermitRootLogin no
+
+# 禁止使用空密码
+PermitEmptyPasswords no
+
+# 只允许指定用户登录
+AllowUsers user01 user02
+
+# 只允许指定用户组登录
+AllowGroups group1
+
+# 禁止使用版本1协议 因为其存在设计缺陷 很容易使密码被黑掉
+Protocol 2
+
+# 关闭X11Forwarding 防止会话被劫持
+X11Forwarding no
+
+
+
+################################################################################
