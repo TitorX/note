@@ -2,8 +2,6 @@ Django网站 ---- 应用物理系官网
 
 ENVI开发
 	IDL基础内容
-		循环 for while
-		控制 if case goto
 		错误处理语句
 		路径操作
 		自由格式文件读
@@ -35,11 +33,11 @@ Git服务器搭建
 //////////掌握技能
 C
 Pthon
-////////学习中
+Linux
 Nginx
+////////学习中
 MongoDB
 Git
-Linux
 Django
 IDL
 ////////不够熟练
