@@ -21,7 +21,7 @@ ENVI开发
 Git深入学习
 	git撤销
 Git服务器搭建
-
+axure
 //////////远
 在线文字游戏 人工智能
 
@@ -40,6 +40,9 @@ MongoDB
 Git
 Django
 IDL
+JavaScript
+SVN
+HTML/CSS
 ////////不够熟练
 PHP
 C++
@@ -47,12 +50,8 @@ C++
 	sqlite
 	mysql
 正则表达式
-HTML/CSS
 Win32API
-JavaScript
 Apache
-Json
-SVN
 //////////linux工具
 logrotate
 cron
