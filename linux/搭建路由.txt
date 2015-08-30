@@ -1,0 +1,46 @@
+路由器配置
+
+需要两块网卡 一块连接内网一块连接外网
+
+给内网网卡指定ip
+开启dhcpd服务
+指定默认网关
+内网搭建完毕
+
+设置进行ip转发
+
+
+是否进行ip转发 0关闭 1打开
+/proc/sys/net/ipv4/ip_forward
+
+
+给网卡分配ip
+	ifconfig 网卡名 ip地址
+	ip addr add
+
+
+#!/bin/bash 
+
+EXIF='wlp3s0'
+EXNET='192.168.10.0/24'
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+/sbin/iptables -F  
+/sbin/iptables -X
+/sbin/iptables -Z
+/sbin/iptables -F -t nat
+/sbin/iptables -X -t nat
+/sbin/iptables -Z -t nat
+/sbin/iptables -P INPUT   ACCEPT
+/sbin/iptables -P OUTPUT  ACCEPT
+/sbin/iptables -P FORWARD ACCEPT
+/sbin/iptables -t nat -P PREROUTING   ACCEPT
+/sbin/iptables -t nat -P POSTROUTING  ACCEPT
+/sbin/iptables -t nat -P OUTPUT       ACCEPT
+/sbin/modprobe ip_tables 2> /dev/null
+/sbin/modprobe ip_nat_ftp 2> /dev/null
+/sbin/modprobe ip_nat_irc 2> /dev/null
+/sbin/modprobe ip_conntrack 2> /dev/null
+/sbin/modprobe ip_conntrack_ftp 2> /dev/null
+/sbin/modprobe ip_conntrack_irc 2> /dev/null
+/sbin/iptables -t nat -A POSTROUTING -o $EXIF -s $EXNET -j MASQUERADE

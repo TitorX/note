@@ -20,8 +20,43 @@ ENVI开发
 
 Git深入学习
 	git撤销
-Git服务器搭建
 axure
+
+
+web框架
+	url管理
+	
+	get、post、session、cookie管理
+	header管理
+	静态文件处理
+	安全性
+
+	数据库管理
+	模板语言
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //////////远
 在线文字游戏 人工智能
 
@@ -55,8 +90,6 @@ Apache
 //////////linux工具
 logrotate
 cron
-supervisor
-	uwsgi
 
 
 
