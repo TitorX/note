@@ -20,6 +20,16 @@ ENVI开发
 
 axure
 
+自考计算机网络
+
+学习java语言
+
+深入学习计算机网络部分
+
+编写自己的http server
+编写自己的web server
+编写自己的web框架
+编写自己的blog
 
 //////////远
 在线文字游戏 人工智能
@@ -34,14 +44,14 @@ C
 Pthon
 Linux
 Nginx
+Django
+SVN
 ////////学习中
 MongoDB
 Git
-Django
 IDL
-JavaScript
-SVN
 HTML/CSS
+JavaScript
 ////////不够熟练
 PHP
 C++
