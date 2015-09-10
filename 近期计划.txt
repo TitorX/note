@@ -18,43 +18,7 @@ ENVI开发
 
 使用git完整的开发个人网站
 
-Git深入学习
-	git撤销
 axure
-
-
-web框架
-	url管理
-	
-	get、post、session、cookie管理
-	header管理
-	静态文件处理
-	安全性
-
-	数据库管理
-	模板语言
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //////////远
