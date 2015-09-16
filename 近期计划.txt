@@ -26,8 +26,7 @@ axure
 
 深入学习计算机网络部分
 
-编写自己的http server
-编写自己的web server
+
 编写自己的web框架
 编写自己的blog
 
