@@ -128,6 +128,11 @@
 		file-roller					归档管理器
 		p7zip						归档工具
 		wine						运行exe
+		pinta						画图工具
+		Evince						pdf阅读工具
+		gitg						git工具
+		
+		
 		
 	开发工具
 		gcc                     	C/C++开发（默认已装）
