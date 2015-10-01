@@ -28,8 +28,12 @@ axure
 
 编写自己的blog
 
-阿里云邮箱
 长期域名备案
+学习sqlalchemy
+
+web框架
+	实现session
+	实现中间件
 
 //////////远
 在线文字游戏 人工智能
@@ -46,9 +50,9 @@ Linux
 Nginx
 Django
 SVN
-////////学习中
-MongoDB
 Git
+////////学习中
+MongoD
 IDL
 HTML/CSS
 JavaScript
