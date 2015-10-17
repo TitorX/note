@@ -42,7 +42,7 @@
 		numix-icon-theme        	numix图标
 		numix-circle-icon-theme 	numix图标
 		gparted                 	分区工具
-		foxitreader             	pdf阅读器
+		Evince		             	pdf阅读器
 		deadbeef                	音乐播放器
 		flashplugin             	flash组件
 		firefox                 	火狐浏览器
@@ -57,6 +57,8 @@
 		*lib32-alsa-plugins 		steam声音支持
 		*poingdownload-git			下载工具
 		×transmission-gtk			bt下载工具
+		pinta						绘图软件
+		
 		
 	开发工具
 		gcc                     	C/C++开发（默认已装）
