@@ -3,11 +3,12 @@
 		fuse-exfat exfat-utils  exfat分区支持
 		ntfs-3g                 ntfs分区支持
 		dosfstools              fat分区支持	
-		grub					启动引导
+		grub			启动引导
 		dosfstools efibootmgr   引导管理
 		yaourt                  AUR扩展下载
 		gvfs                    自动挂载
 		thunar-volman           挂载扩展
+		bash-completion		补全增强工具
 	桌面系统
 		xorg                    X系统
 		xorg-xinit              X辅助启动
@@ -28,10 +29,10 @@
 			exec startxfce4
 		xf86-video-vesa         	通用显卡驱动
 		xfce4                   	xfce4桌面
-		xfce4-goodies               xfce4扩展
-		ttf-arphic-ukai             中文字体
-		adobe-source-code-pro-fonts 英文字体
-		fcitx                       中文输入法
+		xfce4-goodies               	xfce4扩展
+		ttf-arphic-ukai             	中文字体
+		adobe-source-code-pro-fonts 	英文字体
+		fcitx                       	中文输入法
 		fcitx-configtool        	输入法配置工具
 		fcitx-cloudpinyin       	云拼音输入法
 
@@ -48,55 +49,55 @@
 		firefox                 	火狐浏览器
 		firefox-i18n-zh-cn      	火狐汉化包
 		wps-office              	文本处理软件
-		alacarte					主菜单
-		file-roller					归档管理器
-		p7zip						归档工具
-		wine						运行exe
-		*steam						游戏平台
+		alacarte			主菜单
+		file-roller			归档管理器
+		p7zip				归档工具
+		wine				运行exe
+		*steam				游戏平台
 		*lib32-nvidia-304xx-utils	32位显卡驱动 steam支持
 		*lib32-alsa-plugins 		steam声音支持
-		*poingdownload-git			下载工具
-		×transmission-gtk			bt下载工具
-		pinta						绘图软件
+		*poingdownload-git		下载工具
+		×transmission-gtk		bt下载工具
+		pinta				绘图软件
 		
 		
 	开发工具
 		gcc                     	C/C++开发（默认已装）
 		gdb                     	C/C++调试	
-		Codeblocks					C/C++开发IDE
+		Codeblocks			C/C++开发IDE
 		python2                 	Python开发
 		python2-pip             	Python库
-		python2-pillow				Python图形库
-		python2-django				Python库
+		python2-pillow			Python图形库
+		python2-django			Python库
 		python2-numpy           	Python库
 		python2-matplotlib      	Python库
 		python2-mayavi          	Python库
-		python2-vpython				3D库
+		python2-vpython			3D库
 		pycharm                 	Python开发IDE
-		virtalbox					虚拟机
-		×Nginx						服务器软件
+		virtalbox			虚拟机
+		×Nginx				服务器软件
 		×uwsgi uwsgi-plugin-python2	Nginx的python支持
-		apache						服务器软件
-		mod_wsgi2					Apache的python支持
-		cmake						c工程辅助
-		eclipse						IDE
-		git							版本控制工具
-		expect						shell自动化工具
-		docket						沙盒
-		net-tools					ifconfig等网络工具支持
-		mlocate						locate/uodatedb命令支持
-		sqlitebrowser				sqlite数据库图形化管理器
-		iftop						实时流量监控
-		Aircrack-ng					安全工具
-		gftp						ftp图形界面
-		rhc							openshift管理工具
+		apache				服务器软件
+		mod_wsgi2			Apache的python支持
+		cmake				c工程辅助
+		eclipse				IDE
+		git				版本控制工具
+		expect				shell自动化工具
+		docket				沙盒
+		net-tools			ifconfig等网络工具支持
+		mlocate				locate/uodatedb命令支持
+		sqlitebrowser			sqlite数据库图形化管理器
+		iftop				实时流量监控
+		Aircrack-ng			安全工具
+		gftp				ftp图形界面
+		rhc				openshift管理工具
 
 	Win支持
-		*playonlinux 				wine整合
-		wine                        运行exe
-		wine_gecko wine-mono        IE .NET 依赖解决
+		*playonlinux			wine整合
+		wine                        	运行exe
+		wine_gecko wine-mono        	IE .NET 依赖解决
 
 	下载工具
-		uget						普通下载器-gui版
-		wget						普通下载器-命令行版
-		vuze						bt下载器-gui
+		uget				普通下载器-gui版
+		wget				普通下载器-命令行版
+		vuze				bt下载器-gui
