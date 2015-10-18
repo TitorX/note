@@ -59,6 +59,8 @@
 		*poingdownload-git		下载工具
 		×transmission-gtk		bt下载工具
 		pinta				绘图软件
+		network-manager-applet		网络管理gui
+		xfce4-notifyd			网络管理gui
 		
 		
 	开发工具
