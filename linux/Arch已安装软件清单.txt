@@ -11,7 +11,7 @@
 	yaourt                  	AUR扩展下载
 	gvfs                    	自动挂载
 	thunar-volman           	挂载扩展
-	
+
 桌面系统
 	xf86-video-vesa         	通用显卡驱动
 	nvidia-304xx				N卡闭源驱动
@@ -24,7 +24,7 @@
 		export LANG=zh_CN.UTF-8
 		export LANGUAGE=zh_CN:en_US
 		export LC_ALL=zh_CN.UTF-8
-		
+
 		输入法支持
 		export GTK_IM_MODULE=fcitx
 		export QT_IM_MODULE=fcitx
@@ -75,8 +75,8 @@
 		到 /usr/lib/python2.7/site-packages/ 目录下
 		将notify目录重命名为pynotify (pynotify安装后包名与引用名不一致)
 		sudo mv notify pynotify
-	
-	
+
+
 开发工具
 	gcc                     	C/C++开发（默认已装）
 	gdb                     	C/C++调试	
@@ -114,6 +114,6 @@ Win支持
 	wine_gecko wine-mono       	IE .NET 依赖解决
 
 下载工具
-	uget				普通下载器-gui版
-	wget				普通下载器-命令行版
-	vuze				bt下载器-gui
+	uget						普通下载器-gui版
+	wget						普通下载器-命令行版
+	vuze						bt下载器-gui

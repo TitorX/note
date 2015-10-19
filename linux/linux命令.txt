@@ -31,6 +31,7 @@
 	useradd -m -g users -s /bin/bash username
 
 
-
+查看哪些端口被哪些程序监听
+netstat -lntp
 
 
