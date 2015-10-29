@@ -16,8 +16,6 @@ ENVI开发
 		预期功能 主：项目组队平台 次：简单的项目进度管理 提供简单的通讯手段
 		设计原则 坚持KISS原则!
 
-使用git完整的开发个人网站
-
 axure
 
 自考计算机网络
@@ -26,15 +24,9 @@ axure
 
 深入学习计算机网络部分
 
-编写自己的blog
-
 长期域名备案
 学习sqlalchemy
 
-web框架
-	实现session
-	缓存机制
-	性能优化
 
 //////////远
 在线文字游戏 人工智能
@@ -52,11 +44,13 @@ Nginx
 Django
 SVN
 Git
-////////学习中
-MongoD
-IDL
+MongoDB
 HTML/CSS
 JavaScript
+Jquery
+Bootstrap
+////////学习中
+IDL
 ////////不够熟练
 PHP
 C++
@@ -66,9 +60,3 @@ C++
 正则表达式
 Win32API
 Apache
-//////////linux工具
-logrotate
-cron
-
-
-
