@@ -2,39 +2,37 @@ axure
 
 自考计算机网络
 
-学习java语言
-
 深入学习计算机网络部分
 
 //////////远
 在线文字游戏 人工智能
-
 准备生活照片
-
 完善个人简历页面
 //////////掌握技能
 C
 Pthon
+	Django
+	Flask
 Linux
-Nginx
-Django
-SVN
-Git
-MongoDB
-HTML/CSS
-JavaScript
-Jquery
-Bootstrap
-////////学习中
-Flask
-Java
-IDL
-////////不够熟练
-PHP
-C++
-数据库
+	Nginx
+	MongoDB
 	sqlite
 	mysql
+	SVN
+	Git
+	Apache
+前端
+	HTML/CSS
+	JavaScript
+	Jquery
+	Bootstrap
 正则表达式
+////////学习中
+Java
+C++
+IDL
+C#
+////////了解
+PHP
 Win32API
-Apache
+
