@@ -44,3 +44,7 @@
 
 查看数据表内容   SELECT * FROM tablename;
 
+自增  auto_increment
+主键  primary key
+
+
